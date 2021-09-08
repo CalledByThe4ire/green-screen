@@ -1,10 +1,13 @@
 <div class="slider">
+  <button class="slider__control slider-control slider-control--prev">
+    {{Icon iconName='caret' className='icon icon--caret' iconWidth='20' iconHeight='10'}}
+  </button>
   <div class="slider__viewport">
     <ul class="slider__wrapper">
       {{#each (chunk slider.items 3)}}
       <li class="slider__slide slide">
         {{#each this}}
-        <div {{#if (eq @index 1)}}class="box box--active"{{else}}class="box"{{/if}}>
+        <div {{#if (eq @index 1)}}class="day day--active"{{else}}class="day"{{/if}}>
           <span class="day__date">{{dateFormat this "DD MMMM"}}</span>
           <span class="day__weekday">{{dateFormat this "dddd"}}</span>
         </div>
@@ -13,4 +16,8 @@
       {{/each}}
     </ul>
   </div>
+
+  <button class="slider__control slider-control slider-control--next">
+    {{Icon iconName='caret' className='icon icon--caret' iconWidth='20' iconHeight='10'}}
+  </button>
 </div>

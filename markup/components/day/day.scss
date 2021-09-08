@@ -1,3 +1,21 @@
 .day {
-  display: block;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  min-height: inherit;
+  background-color: $tetriary-color;
+  border-radius: 8px;
+
+  &--active {
+    color: #fff;
+    background-color: $secondary-color;
+    box-shadow: 0 8px 20px rgba($color: $secondary-color, $alpha: 0.6);
+  }
+
+  &__date {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
 }

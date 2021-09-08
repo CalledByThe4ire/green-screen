@@ -1,4 +1,8 @@
 .main {
-  display: block;
-  padding: 60px;
+  display: grid;
+  grid-area: main;
+  grid-template-areas: "date info" "schedule info" "scheme info";
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: auto 360px;
+  align-items: start;
 }

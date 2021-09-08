@@ -1,5 +1,38 @@
 .slider {
   $items: 1;
 
-  display: block;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 80px 1fr 80px;
+  column-gap: 30px;
+  min-height: 120px;
+
+  &__control {
+    background-color: $tetriary-color;
+    border-radius: 8px;
+
+    &:hover {
+      .icon {
+        fill: darken($color: #ccdaf4, $amount: 5%);
+      }
+    }
+  }
+
+  &__viewport,
+  &__wrapper,
+  &__slide {
+    min-height: inherit;
+  }
+
+  &__viewport {
+    width: 100%;
+  }
+
+  &__wrapper {
+    width: calc(100% * #{$items});
+  }
+
+  &__slide {
+    width: calc(100% / #{$items});
+  }
 }

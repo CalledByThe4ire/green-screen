@@ -1,0 +1,25 @@
+.slider-control {
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &--prev,
+  &--next {
+    .icon {
+      fill: #ccdaf4;
+    }
+  }
+
+  &--prev {
+    .icon {
+      transform: rotate(90deg);
+    }
+  }
+
+  &--next {
+    .icon {
+      transform: rotate(-90deg);
+    }
+  }
+}
