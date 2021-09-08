@@ -1,0 +1,5 @@
+@mixin bg($sprite, $repeat: no-repeat) {
+  @include sprite-mixin-template($sprite);
+
+  background-repeat: $repeat;
+}
