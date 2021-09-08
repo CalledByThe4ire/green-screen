@@ -1,0 +1,16 @@
+<div class="slider">
+  <div class="slider__viewport">
+    <ul class="slider__wrapper">
+      {{#each (chunk slider.items 3)}}
+      <li class="slider__slide slide">
+        {{#each this}}
+        <div {{#if (eq @index 1)}}class="box box--active"{{else}}class="box"{{/if}}>
+          <span class="day__date">{{dateFormat this "DD MMMM"}}</span>
+          <span class="day__weekday">{{dateFormat this "dddd"}}</span>
+        </div>
+        {{/each}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

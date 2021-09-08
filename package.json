@@ -17,6 +17,7 @@
     "gulp-gh-pages": "^0.5.4",
     "include-media": "^1.4.9",
     "input-range-scss": "latest",
+    "moment": "^2.29.1",
     "normalize.css": "latest",
     "postcss-preset-env": "latest",
     "postcss-scss": "^2.1.1",

@@ -1,6 +1,8 @@
-'use strict';
-
 const Handlebars = tars.packages.handlebars;
+const moment = require('moment');
+require('moment/locale/es');
+
+moment.locale('ru');
 
 /**
  * You can add your own helpers to handlebarsHelpers Object
@@ -8,14 +10,30 @@ const Handlebars = tars.packages.handlebars;
  * @type {Object}
  */
 const handlebarsHelpers = {
-  concat: function() {
-    var outStr = '';
-    for (var arg in arguments) {
-      if (typeof arguments[arg] != 'object') {
+  concat() {
+    let outStr = '';
+    for (const arg in arguments) {
+      if (typeof arguments[arg] !== 'object') {
         outStr += arguments[arg];
       }
     }
     return outStr;
+  },
+  chunk(array, size) {
+    const results = [];
+    while (array.length) {
+      results.push(array.splice(0, size));
+    }
+    return results;
+  },
+  dateFormat(date, format) {
+    return moment(date).format(format);
+  },
+  eq(param1, param2) {
+    return param1 === param2;
+  },
+  notEq(param1, param2) {
+    return param1 !== param2;
   }
 };
 
