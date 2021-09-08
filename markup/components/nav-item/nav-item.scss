@@ -1,0 +1,40 @@
+.nav-item {
+  &__link {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 12px;
+    place-items: center;
+
+    @include padding-x(30px);
+    @include padding-y(20px);
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    transition: all 0.3s ease-in-out;
+
+    span {
+      margin-right: auto;
+    }
+
+    .icon {
+      fill: #fff;
+      transition: inherit;
+    }
+
+    &:hover {
+      color: $primary-color;
+      background-color: $tetriary-color;
+
+      .icon {
+        fill: $primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.breadcrumb {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  place-items: center;
+  font-weight: 700;
+  color: $quaternary-color;
+  text-transform: uppercase;
+
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: flex;
+    padding-right: 20px;
+    color: $primary-color;
+    text-decoration: none;
+  }
+
+  .icon {
+    fill: $primary-color;
+    transform: rotate(-90deg);
+  }
+}

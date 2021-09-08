@@ -1,0 +1,23 @@
+.cinemas {
+  display: grid;
+  grid-area: c;
+  grid-template-columns: 1fr auto;
+  place-items: center;
+
+  @include padding-x(24px);
+  @include padding-y(14px);
+
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+
+  &__toggler {
+    display: grid;
+    margin-left: 16px;
+    cursor: pointer;
+
+    .icon {
+      fill: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<ul class="cinemas">
+  {{#each cinemas.items}}
+  <li
+    {{#if @first}} class="cinemas__item cinemas__item--active cinema"
+      {{else}} class="cinemas__item cinema"
+    {{/if}}>
+      <a href="#" class="cinema__link">{{this}}</a>
+  </li>
+  {{/each}}
+  <button class="cinemas__toggler">
+    {{Icon iconName='caret' className='icon icon--caret' iconWidth='10'
+    iconHeight='6'}}
+    <span class="sr-only">Открыть / Закрыть меню</span>
+  </button>
+</ul>

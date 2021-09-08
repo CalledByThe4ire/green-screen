@@ -1,0 +1,10 @@
+<ul class="breadcrumbs">
+  {{#each breadcrumbs.items}}
+  <li class="breadcrumbs__item breadcrumb">
+    {{#if @last}} {{this}} {{else}}
+    <a class="breadcrumb__link" href="#">{{this}}</a>
+    {{Icon iconName='caret' className='icon icon--caret' iconWidth='10' iconHeight='6'}}
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>

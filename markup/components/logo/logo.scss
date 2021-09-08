@@ -1,0 +1,9 @@
+.logo {
+  display: grid;
+  grid-area: l;
+  place-content: center;
+
+  &__link {
+    display: flex;
+  }
+}

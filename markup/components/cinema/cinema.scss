@@ -1,0 +1,10 @@
+.cinema {
+  display: block;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &__link {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}

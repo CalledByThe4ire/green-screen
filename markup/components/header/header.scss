@@ -1,0 +1,8 @@
+.header {
+  display: grid;
+  grid-area: header;
+  grid-template-areas: "l l b b b b b b b b b c c c c";
+  grid-template-columns: repeat(15, 1fr);
+  column-gap: 12px;
+  background-color: $tetriary-color;
+}

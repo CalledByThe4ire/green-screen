@@ -1,0 +1,9 @@
+.nav {
+  display: grid;
+  grid-area: nav;
+  grid-auto-rows: 1fr auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 30px;
+  background-color: $primary-color;
+}

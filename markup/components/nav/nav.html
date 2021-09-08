@@ -1,0 +1,12 @@
+<nav class="nav">
+  <ul class="nav__list">
+    {{#each nav.items}}
+    <li {{#if @first}}class="nav__item nav__item--active nav-item"{{else}}class="nav__item nav-item"{{/if}}>
+      <a class="nav-item__link" href="#">
+      {{Icon iconName=(concat '' this.iconName) className=(concat 'icon icon--' this.iconName) iconWidth='18' iconHeight='22'}}
+        <span>{{this.text}}</span></a>
+    </li>
+    {{/each}}
+  </ul>
+  {{> profile/profile}}
+</nav>

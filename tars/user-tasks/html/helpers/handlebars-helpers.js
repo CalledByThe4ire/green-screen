@@ -8,16 +8,15 @@ const Handlebars = tars.packages.handlebars;
  * @type {Object}
  */
 const handlebarsHelpers = {
-
-    /**
-     * This is an example of handlebars-helper
-     * This helper gets string and returns it
-     * @param  {String} str Source string
-     * @return {String}     Result string
-     */
-    exampleHelper: function (str) {
-        return str;
+  concat: function() {
+    var outStr = '';
+    for (var arg in arguments) {
+      if (typeof arguments[arg] != 'object') {
+        outStr += arguments[arg];
+      }
     }
+    return outStr;
+  }
 };
 
 module.exports = handlebarsHelpers;

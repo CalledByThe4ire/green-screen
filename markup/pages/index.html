@@ -4,9 +4,10 @@
     {{> head/head head.defaults}}
   </head>
 
-  <body class="page">
+  <body class="page container">
     %=symbols=%
     <!-- Include your modules here -->
+    {{> header/header}} {{> nav/nav}} {{> main/main}}
 
     <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
     <script>svg4everybody();</script>
