@@ -1,8 +1,13 @@
 .main {
   display: grid;
   grid-area: main;
-  grid-template-areas: "date info" "schedule info" "scheme info";
-  grid-template-rows: repeat(3, auto);
-  grid-template-columns: auto 360px;
+  grid-template-areas: "l r";
+  grid-template-columns: 1fr 360px;
   align-items: start;
+
+  &__wrapper {
+    grid-area: l;
+    height: 100%;
+    padding: 60px;
+  }
 }

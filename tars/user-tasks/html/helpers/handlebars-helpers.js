@@ -29,6 +29,11 @@ const handlebarsHelpers = {
   dateFormat(date, format) {
     return moment(date).format(format);
   },
+  calcTime(date, count) {
+    return moment(date, 'HH:mm:ss')
+      .add(count, 'minutes')
+      .format('HH:mm');
+  },
   eq(param1, param2) {
     return param1 === param2;
   },

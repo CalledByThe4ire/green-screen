@@ -1,4 +1,27 @@
 <section class="main__schedule schedule">
   <h2 class="sr-only">Выбор времени сеанса</h2>
-  <p>SCHEDULE</p>
+  <div class="schedule__wrapper">
+    <span class="schedule__label">2D:</span>
+    <ul class="schedule__list">
+      {{#each schedule.2d}}
+      <li {{#if @last}}class="schedule__item schedule__item--active"{{else}}class="schedule__item"{{/if}}>
+        <span>{{this.date}}</span>&nbsp;-&nbsp;<span
+          >{{calcTime this.date this.duration}}</span
+        >
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="schedule__wrapper">
+    <span class="schedule__label">3D:</span>
+    <ul class="schedule__list">
+      {{#each schedule.3d}}
+      <li class="schedule__item">
+        <span>{{this.date}}</span>&nbsp;-&nbsp;<span
+          >{{calcTime this.date this.duration}}</span
+        >
+      </li>
+      {{/each}}
+    </ul>
+  </div>
 </section>

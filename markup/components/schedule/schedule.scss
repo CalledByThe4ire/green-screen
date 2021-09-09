@@ -1,5 +1,53 @@
 .schedule {
-  grid-area: schedule;
+  $schedule: &;
 
-  @include padding-x(60px);
+  @include margin-y(40px);
+
+  &__wrapper {
+    display: grid;
+    grid-template-areas: "label list";
+    grid-template-rows: 1fr;
+    grid-template-columns: 80px 1fr;
+    column-gap: 30px;
+
+    &:not(:last-of-type) {
+      border-bottom: 2px dashed #ecf2ff;
+    }
+  }
+
+  &__label {
+    grid-area: label;
+    align-self: center;
+    justify-self: start;
+    font-weight: 700;
+    color: $quaternary-color;
+  }
+
+  &__list {
+    display: grid;
+    grid-area: list;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(5, 190px);
+    column-gap: 30px;
+
+    @include padding-y(20px);
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+
+    @include padding-y(20px);
+    @include padding-x(30px);
+
+    font-weight: 700;
+    background-color: $tetriary-color;
+    border-radius: 30px;
+
+    &--active {
+      color: #fff;
+      background-color: $secondary-color;
+      box-shadow: 0 8px 20px rgba($color: $secondary-color, $alpha: 0.6);
+    }
+  }
 }
